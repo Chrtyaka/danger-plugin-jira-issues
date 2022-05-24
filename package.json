@@ -1,0 +1,49 @@
+{
+	"name": "danger-plugin-jira-issues",
+	"version": "1.0.0",
+	"description": "Danger plugin for link JIRA issues in MRs or PRs",
+	"main": "main.ts",
+	"directories": {
+		"lib": "lib"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.0.0",
+		"@commitlint/config-conventional": "^17.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.26.0",
+		"@typescript-eslint/parser": "^5.26.0",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^12.4.2",
+		"prettier": "^2.6.2",
+		"typescript": "^4.6.4"
+	},
+	"scripts": {
+		"test": "jest --verbose",
+		"lint": "eslint . --ext .ts",
+    "build": "tsc -p tsconfig.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chrtyaka/danger-plugin-jira-issues.git"
+	},
+	"keywords": [
+		"jira",
+		"danger",
+		"danger-plugin",
+		"gitlab"
+	],
+	"author": "Viacheslav Cherkesov",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Chrtyaka/danger-plugin-jira-issues/issues"
+	},
+	"homepage": "https://github.com/Chrtyaka/danger-plugin-jira-issues#readme",
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint",
+      "prettier --write"
+    ]
+  }
+}
